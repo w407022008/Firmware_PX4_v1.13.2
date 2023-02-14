@@ -61,6 +61,7 @@ set(msg_files
 	CollisionReport.msg
 	ControlAllocatorStatus.msg
 	Cpuload.msg
+	DataRecord.msg
 	DebugArray.msg
 	DebugKeyValue.msg
 	DebugValue.msg
@@ -218,6 +219,7 @@ set(msg_files
 	VtolVehicleStatus.msg
 	WheelEncoders.msg
 	Wind.msg
+	WindSpeed.msg
 	YawEstimatorStatus.msg
 )
 list(SORT msg_files)

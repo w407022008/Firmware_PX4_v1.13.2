@@ -1,6 +1,6 @@
 ############################################################################
 #
-#   Copyright (c) 2017-2019 PX4 Development Team. All rights reserved.
+#   Copyright (c) 2018 PX4 Development Team. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,12 +31,13 @@
 #
 ############################################################################
 
-add_subdirectory(accelerometer)
-add_subdirectory(anemometer)
-add_subdirectory(device)
-add_subdirectory(gyroscope)
-add_subdirectory(led)
-add_subdirectory(magnetometer)
-add_subdirectory(rangefinder)
-add_subdirectory(smbus)
-add_subdirectory(smbus_sbs)
+px4_add_module(
+	MODULE modules__data_record
+	MAIN data_record
+	SRCS
+		data_record.cpp
+		data_record.hpp
+	DEPENDS
+		px4_work_queue
+	)
+

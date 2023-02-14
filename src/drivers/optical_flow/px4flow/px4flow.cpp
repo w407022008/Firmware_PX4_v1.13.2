@@ -250,6 +250,7 @@ PX4FLOW::collect()
 
 	report.integration_timespan_us = _frame_integral.integration_timespan; // microseconds
 
+	report.device_id = 100;
 	report.quality = _frame_integral.qual; // 0:bad ; 255 max quality
 
 	report.max_flow_rate = 2.5f;

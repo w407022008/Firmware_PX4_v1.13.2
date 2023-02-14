@@ -327,6 +327,7 @@ void PAA3905::RunImpl()
 				sensor_optical_flow_s sensor_optical_flow{};
 				sensor_optical_flow.timestamp_sample = timestamp_sample;
 				sensor_optical_flow.device_id = get_device_id();
+				sensor_optical_flow.device_id = 105;
 
 				sensor_optical_flow.error_count = perf_event_count(_bad_register_perf) + perf_event_count(_bad_transfer_perf);
 

@@ -328,6 +328,7 @@ PMW3901::RunImpl()
 
 	report.integration_timespan_us = _flow_dt_sum_usec; 	// microseconds
 
+	report.device_id = 101;
 	report.quality = _flow_sample_counter > 0 ? _flow_quality_sum / _flow_sample_counter : 0;
 
 	/* No gyro on this board */

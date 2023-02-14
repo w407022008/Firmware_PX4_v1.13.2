@@ -44,6 +44,17 @@ parameters:
             default: 2
 
         # Motor parameters
+        CA_R_MAX:
+            description:
+                short: Max motors output
+                long: |
+                  The maximum output of motor output is limitted.
+            type: float
+            decimal: 2
+            increment: 0.05
+            min: 0.0
+            max: 1.0
+            default: 1.0
         CA_R_REV:
             description:
                 short: Bidirectional/Reversible motors

@@ -512,7 +512,7 @@ bool EstimatorInterface::initialise_interface(uint64_t timestamp)
 	// find the maximum time delay the buffers are required to handle
 
 	// it's reasonable to assume that aux velocity device has low delay. TODO: check the delay only if the aux device is used
-	float max_time_delay_ms = math::max((float)_params.sensor_interval_max_ms, _params.auxvel_delay_ms);
+	float max_time_delay_ms = math::max(_params.forced_delay_ms, (float)_params.sensor_interval_max_ms, _params.auxvel_delay_ms);
 
 	// using baro
 	if (_params.baro_ctrl > 0) {

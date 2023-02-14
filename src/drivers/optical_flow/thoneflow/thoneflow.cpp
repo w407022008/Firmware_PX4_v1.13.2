@@ -273,7 +273,7 @@ Thoneflow::collect()
 			report.max_ground_distance = INFINITY; // Datasheet: infinity
 
 			report.timestamp = hrt_absolute_time();
-
+			report.device_id = 103;
 			_sensor_optical_flow_pub.publish(report);
 		}
 

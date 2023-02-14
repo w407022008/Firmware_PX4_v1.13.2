@@ -83,6 +83,18 @@ then
 	teraranger start -X
 fi
 
+# TFmini-s tof sensor
+if param greater -s SENS_EN_TFMINI_S 0
+then
+	tfmini_s start -X
+fi
+
+# Thermal Anemometer sfm3000 sensor
+if param greater -s SENS_EN_SFM3000 0
+then
+	sfm3000 start -X
+fi
+
 # paa3905 optical flow sensor (external SPI)
 if param greater -s SENS_EN_PAA3905 0
 then

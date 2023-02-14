@@ -53,6 +53,20 @@
 PARAM_DEFINE_INT32(EKF2_PREDICT_US, 10000);
 
 /**
+ * Forced minimum non-IMU observation delay relative to IMU measurements
+ *
+ * If other non-IMU observation delays are smaller than it, it will be forced as the observation delay.
+ *
+ * @group EKF2
+ * @min 0
+ * @max 300
+ * @unit ms
+ * @reboot_required true
+ * @decimal 1
+ */
+PARAM_DEFINE_FLOAT(EKF2_DELAY_FORCE, 0);
+
+/**
  * Magnetometer measurement delay relative to IMU measurements
  *
  * @group EKF2
