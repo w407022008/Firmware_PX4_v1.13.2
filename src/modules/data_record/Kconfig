@@ -1,0 +1,12 @@
+menuconfig MODULES_DATA_RECORD
+	bool "data_record"
+	default n
+	---help---
+		Enable support for data_record
+
+menuconfig USER_DATA_RECORD
+	bool "data_record running as userspace module"
+	default y
+	depends on BOARD_PROTECTED && MODULES_DATA_RECORD
+	---help---
+		Put data_record in userspace memory
